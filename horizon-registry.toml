@@ -1,0 +1,7 @@
+name = "Chunk Limiter HUD"
+summary = "Shows configurable block and entity limits for loaded chunks."
+description = """
+A client-side native Horizon mod that counts configured blocks and entities in loaded chunks, displays current counts and remaining capacity in a HUD, supports shared custom groups, and outlines overloaded entities. Block scanning runs on a worker thread. The first native version does not yet include the Java edition's configuration screen or through-wall block highlighting.
+"""
+authors = ["vegetableovosh"]
+license = "CC0-1.0"

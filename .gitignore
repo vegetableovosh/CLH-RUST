@@ -1,4 +1,5 @@
 /target/
 /native/
+**/Cargo.lock
 *.hnmod
 *.hmod

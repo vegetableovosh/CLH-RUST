@@ -50,7 +50,7 @@ ID мода — `clh_rust`. Проект закреплён на ревизии 
 Из WSL (первый запуск скачает закреплённую ревизию Horizon; общий target-кэш ускоряет повторные проверки):
 
 ```bash
-cd /mnt/d/майн/CLH-RUST/api
+cd /mnt/d/майн/CLH-RUST/mixins/clh_rust/api
 CARGO_TARGET_DIR=/mnt/d/майн/horizon/target cargo +stable test
 CARGO_TARGET_DIR=/mnt/d/майн/horizon/target cargo +stable clippy --all-targets -- -D warnings
 ```
@@ -64,6 +64,18 @@ horizon-launcher native-build /mnt/d/майн/CLH-RUST --instance <instance> --t
 ```
 
 После сборки запускайте выбранный instance обычной командой Horizon Launcher.
+
+## Упаковка `.hnmod`
+
+Поместите этот репозиторий в `native/clh-rust` свежего checkout `horizon-mods`, затем из корня `horizon-mods` выполните:
+
+```bash
+python3 native/tools/native.py package clh-rust
+```
+
+Готовый файл создаётся в `native/target/clh_rust-0.1.0.hnmod`.
+
+Полную сборку trait API выполняет Horizon Launcher командой `native-build`: отдельный `native.py check` пока не размещает launcher-only пакет `[api]` в проверочном дереве.
 
 ## Лицензия
 

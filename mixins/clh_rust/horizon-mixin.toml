@@ -1,0 +1,18 @@
+# CLH-RUST: native Horizon trait mod.
+[mod]
+id = "clh_rust"
+version = "0.1.0"
+
+[compatibility]
+horizon_revision = "6cc93d13ced86a355d41764644506ae2550123cb"
+
+[api]
+path = "api"
+
+# Registry CI removes the launcher-only [api] table before running
+# horizon-mixins. Keep a harmless module so the remaining bundle is valid.
+[[module]]
+id = "ci_anchor"
+file = "crates/horizon-client/src/game.rs"
+name = "clh_rust_ci_anchor"
+source = "ci_anchor.rs"

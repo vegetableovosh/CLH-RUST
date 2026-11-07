@@ -1,7 +1,7 @@
 # CLH-RUST: native Horizon trait mod.
 [mod]
 id = "clh_rust"
-version = "0.1.0"
+version = "0.1.1"
 
 [compatibility]
 horizon_revision = "6cc93d13ced86a355d41764644506ae2550123cb"
